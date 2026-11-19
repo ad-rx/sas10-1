@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan S-SAS Matematika Kelas 10</title>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 1.05
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; padding: 20px; max-width: 860px; margin: 0 auto; }
+
+  /* Header logo pengganti dekorasi judul */
+  .page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .header-logo {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 16px;
+  }
+
+  h1 { text-align: center; color: #2c3e50; margin-bottom: 8px; font-size: 1.6em; }
+  .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-size: 0.95em; }
+  .section-title { font-size: 1.1em; color: #fff; padding: 10px 18px; border-radius: 8px; margin: 28px 0 16px; font-weight: 600; }
+  .section-title.pg { background: #2980b9; }
+  .section-title.pgk { background: #8e44ad; }
+  .card { background: #fff; border-radius: 12px; padding: 22px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  .q-number { font-weight: 700; color: #2c3e50; margin-bottom: 6px; font-size: 1.05em; }
+  .q-text { margin-bottom: 14px; line-height: 1.7; font-size: 1em; }
+  .options label { display: block; padding: 9px 14px; margin: 6px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; line-height: 1.5; }
+  .options label:hover { background: #eaf2fb; }
+  .options input { margin-right: 10px; }
+  .btn-pembahasan { margin-top: 14px; padding: 8px 20px; background: #27ae60; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95em; font-weight: 600; transition: background 0.2s; }
+  .btn-pembahasan:hover { background: #219a52; }
+  .btn-pembahasan.active { background: #e74c3c; }
+  .btn-pembahasan.active:hover { background: #c0392b; }
+  .pembahasan { display: none; margin-top: 14px; padding: 16px; background: #f4fdf6; border-left: 4px solid #27ae60; border-radius: 0 8px 8px 0; line-height: 1.8; }
+  .pembahasan.show { display: block; }
+  .pembahasan .step { margin: 6px 0; }
+  .jawaban { display: inline-block; margin-top: 10px; padding: 4px 12px; background: #27ae60; color: #fff; border-radius: 4px; font-weight: 700; }
+  .score-bar { position: sticky; top: 0; z-index: 100; background: #fff; padding: 12px 20px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .score-bar span { font-weight: 600; color: #2c3e50; }
+  .btn-check { padding: 8px 20px; background: #3498db; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background 0.2s; }
+  .btn-check:hover { background: #2980b9; }
+  .btn-reset { padding: 8px 14px; background: #95a5a6; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin-left: 8px; }
+  .btn-reset:hover { background: #7f8c8d; }
+  .correct { background: #d4edda !important; border-left: 3px solid #27ae60; }
+  .incorrect { background: #f8d7da !important; border-left: 3px solid #e74c3c; }
+
+  /* Badge pilihan ganda kompleks */
+  .badge-multi {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    background: #8e44ad;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    border-radius: 20px;
+    letter-spacing: .3px;
+    vertical-align: middle;
+  }
+
+  /* Copyright */
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7f8c8d;
+    letter-spacing: .2px;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px dashed #d0d7de;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================ HEADER DENGAN LOGO ============================ -->
+<div class="page-header">
+  <img class="header-logo"
+       src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDXJeJJ9DWykQVF58kDp_k3wEhCESgfgjq9XyRyik147AC3z2mTULQkwi0aVbl_N8fhzgzqo2TC5qkg2TGYwuL0UuGf9V0d06WE2vcwkYBoVR1kx-b9g5RGYq4BTuAbtKG3ZyL13chTY_lYQWGXHrtq8eVraaj38e9kICAXBqb9Jo88c3y6hyphenhyphen0NYxcNQ4/s1600/Dinamis.png"
+       alt="Logo TKA">
+  <h1>Latihan S-SAS Matematika Kelas 10</h1>
+  <p class="subtitle">35 Soal Interaktif — Pilihan Ganda Biasa &amp; Pilihan Ganda Kompleks</p>
+</div>
+
+<div class="score-bar">
+  <span id="score-display">Skor: 0 / 35</span>
+  <div>
+    <button class="btn-check" onclick="checkAll()">Periksa Jawaban</button>
+    <button class="btn-reset" onclick="resetAll()">Reset</button>
+  </div>
+</div>
+
+<!-- ==================== BAGIAN 1 : PILIHAN GANDA BIASA ==================== -->
+<div class="section-title pg">📘 Bagian 1 — Pilihan Ganda Biasa (Soal 1–30)</div>
+
+<!-- Soal 1 -->
+<div class="card" id="card1">
+  <div class="q-number">Soal 1</div>
+  <div class="q-text">Nilai dari $3^4 \times 3^2 = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q1" value="A"> A. $243$</label>
+    <label><input type="radio" name="q1" value="B"> B. $729$</label>
+    <label><input type="radio" name="q1" value="C"> C. $2187$</label>
+    <label><input type="radio" name="q1" value="D"> D. $81$</label>
+    <label><input type="radio" name="q1" value="E"> E. $6561$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p1', this)">Pembahasan</button>
+  <div class="pembahasan" id="p1">
+    <div class="step">Gunakan sifat $a^m \times a^n = a^{m+n}$.</div>
+    <div class="step">$3^4 \times 3^2 = 3^{4+2} = 3^6 = 729$</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 2 -->
+<div class="card" id="card2">
+  <div class="q-number">Soal 2</div>
+  <div class="q-text">Nilai dari $5^6 : 5^3 = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q2" value="A"> A. $25$</label>
+    <label><input type="radio" name="q2" value="B"> B. $125$</label>
+    <label><input type="radio" name="q2" value="C"> C. $625$</label>
+    <label><input type="radio" name="q2" value="D"> D. $15$</label>
+    <label><input type="radio" name="q2" value="E"> E. $5$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p2', this)">Pembahasan</button>
+  <div class="pembahasan" id="p2">
+    <div class="step">Gunakan sifat $\dfrac{a^m}{a^n} = a^{m-n}$.</div>
+    <div class="step">$5^6 : 5^3 = 5^{6-3} = 5^3 = 125$</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 3 -->
+<div class="card" id="card3">
+  <div class="q-number">Soal 3</div>
+  <div class="q-text">Nilai dari $\left(3^2\right)^3 = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q3" value="A"> A. $27$</label>
+    <label><input type="radio" name="q3" value="B"> B. $81$</label>
+    <label><input type="radio" name="q3" value="C"> C. $243$</label>
+    <label><input type="radio" name="q3" value="D"> D. $729$</label>
+    <label><input type="radio" name="q3" value="E"> E. $2187$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p3', this)">Pembahasan</button>
+  <div class="pembahasan" id="p3">
+    <div class="step">Gunakan sifat $\left(a^m\right)^n = a^{m \times n}$.</div>
+    <div class="step">$\left(3^2\right)^3 = 3^{2 \times 3} = 3^6 = 729$</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 4 -->
+<div class="card" id="card4">
+  <div class="q-number">Soal 4</div>
+  <div class="q-text">Nilai dari $36^{1/2} = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q4" value="A"> A. $4$</label>
+    <label><input type="radio" name="q4" value="B"> B. $6$</label>
+    <label><input type="radio" name="q4" value="C"> C. $9$</label>
+    <label><input type="radio" name="q4" value="D"> D. $12$</label>
+    <label><input type="radio" name="q4" value="E"> E. $18$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p4', this)">Pembahasan</button>
+  <div class="pembahasan" id="p4">
+    <div class="step">Ingat $a^{1/2} = \sqrt{a}$.</div>
+    <div class="step">$36^{1/2} = \sqrt{36} = 6$</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 5 -->
+<div class="card" id="card5">
+  <div class="q-number">Soal 5</div>
+  <div class="q-text">Nilai dari $27^{2/3} = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q5" value="A"> A. $3$</label>
+    <label><input type="radio" name="q5" value="B"> B. $6$</label>
+    <label><input type="radio" name="q5" value="C"> C. $9$</label>
+    <label><input type="radio" name="q5" value="D"> D. $18$</label>
+    <label><input type="radio" name="q5" value="E"> E. $27$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p5', this)">Pembahasan</button>
+  <div class="pembahasan" id="p5">
+    <div class="step">Gunakan $a^{m/n} = \left(\sqrt[n]{a}\right)^m$.</div>
+    <div class="step">$27^{2/3} = \left(\sqrt[3]{27}\right)^2 = 3^2 = 9$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 6 -->
+<div class="card" id="card6">
+  <div class="q-number">Soal 6</div>
+  <div class="q-text">Jika $4^x = 64$, maka nilai $x$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q6" value="A"> A. $2$</label>
+    <label><input type="radio" name="q6" value="B"> B. $3$</label>
+    <label><input type="radio" name="q6" value="C"> C. $4$</label>
+    <label><input type="radio" name="q6" value="D"> D. $5$</label>
+    <label><input type="radio" name="q6" value="E"> E. $6$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p6', this)">Pembahasan</button>
+  <div class="pembahasan" id="p6">
+    <div class="step">Ubah kedua ruas ke basis yang sama: $4 = 2^2$ dan $64 = 2^6$.</div>
+    <div class="step">$4^x = 64 \Rightarrow \left(2^2\right)^x = 2^6 \Rightarrow 2^{2x} = 2^6$</div>
+    <div class="step">$2x = 6 \Rightarrow x = 3$</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 7 -->
+<div class="card" id="card7">
+  <div class="q-number">Soal 7</div>
+  <div class="q-text">Nilai dari ${}^{3}\log 243 = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q7" value="A"> A. $3$</label>
+    <label><input type="radio" name="q7" value="B"> B. $4$</label>
+    <label><input type="radio" name="q7" value="C"> C. $5$</label>
+    <label><input type="radio" name="q7" value="D"> D. $6$</label>
+    <label><input type="radio" name="q7" value="E"> E. $7$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p7', this)">Pembahasan</button>
+  <div class="pembahasan" id="p7">
+    <div class="step">${}^{3}\log 243 = x \Leftrightarrow 3^x = 243$.</div>
+    <div class="step">Karena $243 = 3^5$, maka $x = 5$.</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 8 -->
+<div class="card" id="card8">
+  <div class="q-number">Soal 8</div>
+  <div class="q-text">Nilai dari ${}^{5}\log 125 = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q8" value="A"> A. $2$</label>
+    <label><input type="radio" name="q8" value="B"> B. $3$</label>
+    <label><input type="radio" name="q8" value="C"> C. $4$</label>
+    <label><input type="radio" name="q8" value="D"> D. $5$</label>
+    <label><input type="radio" name="q8" value="E"> E. $6$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p8', this)">Pembahasan</button>
+  <div class="pembahasan" id="p8">
+    <div class="step">${}^{5}\log 125 = x \Leftrightarrow 5^x = 125$.</div>
+    <div class="step">Karena $125 = 5^3$, maka $x = 3$.</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 9 -->
+<div class="card" id="card9">
+  <div class="q-number">Soal 9</div>
+  <div class="q-text">Nilai dari $\log 10000 = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q9" value="A"> A. $1$</label>
+    <label><input type="radio" name="q9" value="B"> B. $2$</label>
+    <label><input type="radio" name="q9" value="C"> C. $3$</label>
+    <label><input type="radio" name="q9" value="D"> D. $4$</label>
+    <label><input type="radio" name="q9" value="E"> E. $5$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p9', this)">Pembahasan</button>
+  <div class="pembahasan" id="p9">
+    <div class="step">$\log$ tanpa basis berarti $\log_{10}$.</div>
+    <div class="step">$\log 10000 = {}^{10}\log 10^4 = 4$</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 10 -->
+<div class="card" id="card10">
+  <div class="q-number">Soal 10</div>
+  <div class="q-text">Nilai dari ${}^{2}\log 16 + {}^{2}\log 8 = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q10" value="A"> A. $5$</label>
+    <label><input type="radio" name="q10" value="B"> B. $6$</label>
+    <label><input type="radio" name="q10" value="C"> C. $7$</label>
+    <label><input type="radio" name="q10" value="D"> D. $8$</label>
+    <label><input type="radio" name="q10" value="E"> E. $9$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p10', this)">Pembahasan</button>
+  <div class="pembahasan" id="p10">
+    <div class="step">${}^{2}\log 16 = 4$ karena $2^4 = 16$.</div>
+    <div class="step">${}^{2}\log 8 = 3$ karena $2^3 = 8$.</div>
+    <div class="step">Jumlahnya $= 4 + 3 = 7$.</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 11 -->
+<div class="card" id="card11">
+  <div class="q-number">Soal 11</div>
+  <div class="q-text">Barisan aritmetika: $4, 9, 14, 19, \ldots$ Beda ($b$) barisan tersebut adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q11" value="A"> A. $3$</label>
+    <label><input type="radio" name="q11" value="B"> B. $4$</label>
+    <label><input type="radio" name="q11" value="C"> C. $5$</label>
+    <label><input type="radio" name="q11" value="D"> D. $6$</label>
+    <label><input type="radio" name="q11" value="E"> E. $7$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p11', this)">Pembahasan</button>
+  <div class="pembahasan" id="p11">
+    <div class="step">Beda $b = U_2 - U_1 = 9 - 4 = 5$.</div>
+    <div class="step">Cek: $14 - 9 = 5$ dan $19 - 14 = 5$. Konsisten.</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 12 -->
+<div class="card" id="card12">
+  <div class="q-number">Soal 12</div>
+  <div class="q-text">Suku ke-12 dari barisan aritmetika $5, 8, 11, 14, \ldots$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q12" value="A"> A. $35$</label>
+    <label><input type="radio" name="q12" value="B"> B. $36$</label>
+    <label><input type="radio" name="q12" value="C"> C. $37$</label>
+    <label><input type="radio" name="q12" value="D"> D. $38$</label>
+    <label><input type="radio" name="q12" value="E"> E. $39$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p12', this)">Pembahasan</button>
+  <div class="pembahasan" id="p12">
+    <div class="step">$a = 5$, $b = 3$, rumus $U_n = a + (n-1)b$.</div>
+    <div class="step">$U_{12} = 5 + (12-1)\cdot 3 = 5 + 33 = 38$</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 13 -->
+<div class="card" id="card13">
+  <div class="q-number">Soal 13</div>
+  <div class="q-text">Jumlah 6 suku pertama deret aritmetika $2 + 5 + 8 + \ldots$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q13" value="A"> A. $51$</label>
+    <label><input type="radio" name="q13" value="B"> B. $54$</label>
+    <label><input type="radio" name="q13" value="C"> C. $57$</label>
+    <label><input type="radio" name="q13" value="D"> D. $60$</label>
+    <label><input type="radio" name="q13" value="E"> E. $63$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p13', this)">Pembahasan</button>
+  <div class="pembahasan" id="p13">
+    <div class="step">$a = 2$, $b = 3$, gunakan $S_n = \dfrac{n}{2}\left(2a + (n-1)b\right)$.</div>
+    <div class="step">$S_6 = \dfrac{6}{2}\left(2\cdot 2 + 5\cdot 3\right) = 3(4 + 15) = 3 \cdot 19 = 57$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 14 -->
+<div class="card" id="card14">
+  <div class="q-number">Soal 14</div>
+  <div class="q-text">Barisan geometri: $3, 12, 48, 192, \ldots$ Rasio ($r$) barisan tersebut adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q14" value="A"> A. $2$</label>
+    <label><input type="radio" name="q14" value="B"> B. $3$</label>
+    <label><input type="radio" name="q14" value="C"> C. $4$</label>
+    <label><input type="radio" name="q14" value="D"> D. $5$</label>
+    <label><input type="radio" name="q14" value="E"> E. $6$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p14', this)">Pembahasan</button>
+  <div class="pembahasan" id="p14">
+    <div class="step">Rasio $r = \dfrac{U_2}{U_1} = \dfrac{12}{3} = 4$.</div>
+    <div class="step">Cek: $\dfrac{48}{12} = 4$ dan $\dfrac{192}{48} = 4$. Konsisten.</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 15 -->
+<div class="card" id="card15">
+  <div class="q-number">Soal 15</div>
+  <div class="q-text">Suku ke-4 dari barisan geometri $2, 6, 18, \ldots$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q15" value="A"> A. $36$</label>
+    <label><input type="radio" name="q15" value="B"> B. $48$</label>
+    <label><input type="radio" name="q15" value="C"> C. $54$</label>
+    <label><input type="radio" name="q15" value="D"> D. $62$</label>
+    <label><input type="radio" name="q15" value="E"> E. $72$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p15', this)">Pembahasan</button>
+  <div class="pembahasan" id="p15">
+    <div class="step">$a = 2$, $r = 3$, rumus $U_n = a \cdot r^{n-1}$.</div>
+    <div class="step">$U_4 = 2 \cdot 3^{3} = 2 \cdot 27 = 54$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 16 -->
+<div class="card" id="card16">
+  <div class="q-number">Soal 16</div>
+  <div class="q-text">Jumlah 4 suku pertama deret geometri $2 + 6 + 18 + 54 + \ldots$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q16" value="A"> A. $60$</label>
+    <label><input type="radio" name="q16" value="B"> B. $70$</label>
+    <label><input type="radio" name="q16" value="C"> C. $80$</label>
+    <label><input type="radio" name="q16" value="D"> D. $90$</label>
+    <label><input type="radio" name="q16" value="E"> E. $100$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p16', this)">Pembahasan</button>
+  <div class="pembahasan" id="p16">
+    <div class="step">$a = 2$, $r = 3$, gunakan $S_n = \dfrac{a\left(r^n - 1\right)}{r - 1}$.</div>
+    <div class="step">$S_4 = \dfrac{2\left(3^4 - 1\right)}{3 - 1} = \dfrac{2(81 - 1)}{2} = 80$</div>
+    <div class="step">Cek langsung: $2 + 6 + 18 + 54 = 80$. ✔</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 17 -->
+<div class="card" id="card17">
+  <div class="q-number">Soal 17</div>
+  <div class="q-text">Jumlah deret geometri tak hingga $8 + 4 + 2 + 1 + \ldots$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q17" value="A"> A. $12$</label>
+    <label><input type="radio" name="q17" value="B"> B. $14$</label>
+    <label><input type="radio" name="q17" value="C"> C. $16$</label>
+    <label><input type="radio" name="q17" value="D"> D. $18$</label>
+    <label><input type="radio" name="q17" value="E"> E. $20$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p17', this)">Pembahasan</button>
+  <div class="pembahasan" id="p17">
+    <div class="step">$a = 8$ dan $r = \dfrac{4}{8} = \dfrac{1}{2}$ (karena $|r| < 1$, deret konvergen).</div>
+    <div class="step">$S_\infty = \dfrac{a}{1 - r} = \dfrac{8}{1 - \frac{1}{2}} = \dfrac{8}{\frac{1}{2}} = 16$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 18 -->
+<div class="card" id="card18">
+  <div class="q-number">Soal 18</div>
+  <div class="q-text">Barisan aritmetika dengan suku pertama $7$ dan beda $4$. Suku ke-9 adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q18" value="A"> A. $35$</label>
+    <label><input type="radio" name="q18" value="B"> B. $37$</label>
+    <label><input type="radio" name="q18" value="C"> C. $39$</label>
+    <label><input type="radio" name="q18" value="D"> D. $41$</label>
+    <label><input type="radio" name="q18" value="E"> E. $43$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p18', this)">Pembahasan</button>
+  <div class="pembahasan" id="p18">
+    <div class="step">$U_n = a + (n-1)b$ dengan $a = 7$, $b = 4$.</div>
+    <div class="step">$U_9 = 7 + (9-1)\cdot 4 = 7 + 32 = 39$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 19 -->
+<div class="card" id="card19">
+  <div class="q-number">Soal 19</div>
+  <div class="q-text">Deret geometri $2 + 4 + 8 + 16 + \ldots$ Jumlah 6 suku pertama adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q19" value="A"> A. $62$</label>
+    <label><input type="radio" name="q19" value="B"> B. $124$</label>
+    <label><input type="radio" name="q19" value="C"> C. $126$</label>
+    <label><input type="radio" name="q19" value="D"> D. $128$</label>
+    <label><input type="radio" name="q19" value="E"> E. $254$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p19', this)">Pembahasan</button>
+  <div class="pembahasan" id="p19">
+    <div class="step">$a = 2$, $r = 2$.</div>
+    <div class="step">$S_6 = \dfrac{2\left(2^6 - 1\right)}{2 - 1} = 2(64 - 1) = 126$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 20 -->
+<div class="card" id="card20">
+  <div class="q-number">Soal 20</div>
+  <div class="q-text">Suku ke-5 dari barisan geometri $1, 3, 9, 27, \ldots$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q20" value="A"> A. $27$</label>
+    <label><input type="radio" name="q20" value="B"> B. $54$</label>
+    <label><input type="radio" name="q20" value="C"> C. $81$</label>
+    <label><input type="radio" name="q20" value="D"> D. $108$</label>
+    <label><input type="radio" name="q20" value="E"> E. $243$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p20', this)">Pembahasan</button>
+  <div class="pembahasan" id="p20">
+    <div class="step">$a = 1$, $r = 3$.</div>
+    <div class="step">$U_5 = 1 \cdot 3^{4} = 81$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 21 -->
+<div class="card" id="card21">
+  <div class="q-number">Soal 21</div>
+  <div class="q-text">Nilai $\sin 30^\circ$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q21" value="A"> A. $0$</label>
+    <label><input type="radio" name="q21" value="B"> B. $\dfrac{1}{2}$</label>
+    <label><input type="radio" name="q21" value="C"> C. $\dfrac{1}{2}\sqrt{2}$</label>
+    <label><input type="radio" name="q21" value="D"> D. $\dfrac{1}{2}\sqrt{3}$</label>
+    <label><input type="radio" name="q21" value="E"> E. $1$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p21', this)">Pembahasan</button>
+  <div class="pembahasan" id="p21">
+    <div class="step">Nilai sudut istimewa: $\sin 30^\circ = \dfrac{1}{2}$.</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 22 -->
+<div class="card" id="card22">
+  <div class="q-number">Soal 22</div>
+  <div class="q-text">Nilai $\cos 45^\circ$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q22" value="A"> A. $0$</label>
+    <label><input type="radio" name="q22" value="B"> B. $\dfrac{1}{2}$</label>
+    <label><input type="radio" name="q22" value="C"> C. $\dfrac{1}{2}\sqrt{2}$</label>
+    <label><input type="radio" name="q22" value="D"> D. $\dfrac{1}{2}\sqrt{3}$</label>
+    <label><input type="radio" name="q22" value="E"> E. $1$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p22', this)">Pembahasan</button>
+  <div class="pembahasan" id="p22">
+    <div class="step">Nilai sudut istimewa: $\cos 45^\circ = \dfrac{1}{2}\sqrt{2}$.</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 23 -->
+<div class="card" id="card23">
+  <div class="q-number">Soal 23</div>
+  <div class="q-text">Nilai $\tan 60^\circ$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q23" value="A"> A. $\dfrac{1}{3}\sqrt{3}$</label>
+    <label><input type="radio" name="q23" value="B"> B. $\dfrac{1}{2}$</label>
+    <label><input type="radio" name="q23" value="C"> C. $1$</label>
+    <label><input type="radio" name="q23" value="D"> D. $\sqrt{3}$</label>
+    <label><input type="radio" name="q23" value="E"> E. $3$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p23', this)">Pembahasan</button>
+  <div class="pembahasan" id="p23">
+    <div class="step">$\tan 60^\circ = \dfrac{\sin 60^\circ}{\cos 60^\circ} = \dfrac{\frac{1}{2}\sqrt{3}}{\frac{1}{2}} = \sqrt{3}$.</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 24 -->
+<div class="card" id="card24">
+  <div class="q-number">Soal 24</div>
+  <div class="q-text">Nilai $\sin 0^\circ$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q24" value="A"> A. $-1$</label>
+    <label><input type="radio" name="q24" value="B"> B. $0$</label>
+    <label><input type="radio" name="q24" value="C"> C. $\dfrac{1}{2}$</label>
+    <label><input type="radio" name="q24" value="D"> D. $1$</label>
+    <label><input type="radio" name="q24" value="E"> E. $\sqrt{2}$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p24', this)">Pembahasan</button>
+  <div class="pembahasan" id="p24">
+    <div class="step">Pada sudut $0^\circ$, ordinat titik pada lingkaran satuan adalah $0$.</div>
+    <div class="step">Jadi $\sin 0^\circ = 0$.</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 25 -->
+<div class="card" id="card25">
+  <div class="q-number">Soal 25</div>
+  <div class="q-text">Nilai $\cos 90^\circ$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q25" value="A"> A. $-1$</label>
+    <label><input type="radio" name="q25" value="B"> B. $0$</label>
+    <label><input type="radio" name="q25" value="C"> C. $\dfrac{1}{2}$</label>
+    <label><input type="radio" name="q25" value="D"> D. $1$</label>
+    <label><input type="radio" name="q25" value="E"> E. $\sqrt{2}$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p25', this)">Pembahasan</button>
+  <div class="pembahasan" id="p25">
+    <div class="step">Pada sudut $90^\circ$, absis titik pada lingkaran satuan adalah $0$.</div>
+    <div class="step">Jadi $\cos 90^\circ = 0$.</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 26 -->
+<div class="card" id="card26">
+  <div class="q-number">Soal 26</div>
+  <div class="q-text">Segitiga siku-siku $ABC$ siku-siku di $B$. $AB = 6$ cm dan $AC = 10$ cm. Nilai $\sin A$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q26" value="A"> A. $\dfrac{3}{5}$</label>
+    <label><input type="radio" name="q26" value="B"> B. $\dfrac{4}{5}$</label>
+    <label><input type="radio" name="q26" value="C"> C. $\dfrac{3}{4}$</label>
+    <label><input type="radio" name="q26" value="D"> D. $\dfrac{4}{3}$</label>
+    <label><input type="radio" name="q26" value="E"> E. $\dfrac{5}{4}$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p26', this)">Pembahasan</button>
+  <div class="pembahasan" id="p26">
+    <div class="step">Siku-siku di $B$, maka $AC$ adalah sisi miring dan $AB$ adalah sisi samping sudut $A$.</div>
+    <div class="step">Cari $BC$ dengan Pythagoras: $BC = \sqrt{AC^2 - AB^2} = \sqrt{100 - 36} = \sqrt{64} = 8$ cm.</div>
+    <div class="step">$\sin A = \dfrac{BC}{AC} = \dfrac{8}{10} = \dfrac{4}{5}$</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 27 -->
+<div class="card" id="card27">
+  <div class="q-number">Soal 27</div>
+  <div class="q-text">Nilai $\cos 30^\circ$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q27" value="A"> A. $0$</label>
+    <label><input type="radio" name="q27" value="B"> B. $\dfrac{1}{2}$</label>
+    <label><input type="radio" name="q27" value="C"> C. $\dfrac{1}{2}\sqrt{2}$</label>
+    <label><input type="radio" name="q27" value="D"> D. $\dfrac{1}{2}\sqrt{3}$</label>
+    <label><input type="radio" name="q27" value="E"> E. $1$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p27', this)">Pembahasan</button>
+  <div class="pembahasan" id="p27">
+    <div class="step">Nilai sudut istimewa: $\cos 30^\circ = \dfrac{1}{2}\sqrt{3}$.</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 28 -->
+<div class="card" id="card28">
+  <div class="q-number">Soal 28</div>
+  <div class="q-text">Nilai $\tan 45^\circ$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q28" value="A"> A. $0$</label>
+    <label><input type="radio" name="q28" value="B"> B. $\dfrac{1}{2}$</label>
+    <label><input type="radio" name="q28" value="C"> C. $1$</label>
+    <label><input type="radio" name="q28" value="D"> D. $\sqrt{2}$</label>
+    <label><input type="radio" name="q28" value="E"> E. $\sqrt{3}$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p28', this)">Pembahasan</button>
+  <div class="pembahasan" id="p28">
+    <div class="step">$\tan 45^\circ = \dfrac{\sin 45^\circ}{\cos 45^\circ} = \dfrac{\frac{1}{2}\sqrt{2}}{\frac{1}{2}\sqrt{2}} = 1$.</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 29 -->
+<div class="card" id="card29">
+  <div class="q-number">Soal 29</div>
+  <div class="q-text">Diketahui $\sin \alpha = \dfrac{5}{13}$ dan $\alpha$ sudut lancip. Nilai $\cos \alpha$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q29" value="A"> A. $\dfrac{5}{12}$</label>
+    <label><input type="radio" name="q29" value="B"> B. $\dfrac{12}{13}$</label>
+    <label><input type="radio" name="q29" value="C"> C. $\dfrac{5}{13}$</label>
+    <label><input type="radio" name="q29" value="D"> D. $\dfrac{12}{5}$</label>
+    <label><input type="radio" name="q29" value="E"> E. $\dfrac{5}{1}$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p29', this)">Pembahasan</button>
+  <div class="pembahasan" id="p29">
+    <div class="step">Gunakan identitas $\sin^2\alpha + \cos^2\alpha = 1$.</div>
+    <div class="step">$\cos^2\alpha = 1 - \left(\dfrac{5}{13}\right)^2 = 1 - \dfrac{25}{169} = \dfrac{144}{169}$</div>
+    <div class="step">Karena $\alpha$ lancip, $\cos\alpha$ positif: $\cos\alpha = \dfrac{12}{13}$.</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 30 -->
+<div class="card" id="card30">
+  <div class="q-number">Soal 30</div>
+  <div class="q-text">Nilai $\sin 45^\circ + \cos 45^\circ = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q30" value="A"> A. $1$</label>
+    <label><input type="radio" name="q30" value="B"> B. $\sqrt{2}$</label>
+    <label><input type="radio" name="q30" value="C"> C. $\dfrac{1}{2}\sqrt{2}$</label>
+    <label><input type="radio" name="q30" value="D"> D. $2$</label>
+    <label><input type="radio" name="q30" value="E"> E. $\dfrac{1}{2}$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p30', this)">Pembahasan</button>
+  <div class="pembahasan" id="p30">
+    <div class="step">$\sin 45^\circ = \cos 45^\circ = \dfrac{1}{2}\sqrt{2}$.</div>
+    <div class="step">$\dfrac{1}{2}\sqrt{2} + \dfrac{1}{2}\sqrt{2} = \sqrt{2}$</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- ==================== BAGIAN 2 : PILIHAN GANDA KOMPLEKS ==================== -->
+<div class="section-title pgk">🧩 Bagian 2 — Pilihan Ganda Kompleks (Soal 31–35)</div>
+
+<!-- Soal 31 -->
+<div class="card" id="card31">
+  <div class="q-number">Soal 31 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Manakah pernyataan berikut yang <strong>BENAR</strong>?</div>
+  <div class="options">
+    <label><input type="checkbox" name="q31" value="A"> A. $3^4 = 81$</label>
+    <label><input type="checkbox" name="q31" value="B"> B. $4^3 = 64$</label>
+    <label><input type="checkbox" name="q31" value="C"> C. $5^2 = 10$</label>
+    <label><input type="checkbox" name="q31" value="D"> D. $2^6 = 64$</label>
+    <label><input type="checkbox" name="q31" value="E"> E. $6^2 = 36$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p31', this)">Pembahasan</button>
+  <div class="pembahasan" id="p31">
+    <div class="step">A. $3^4 = 3 \times 3 \times 3 \times 3 = 81$ → <strong>BENAR</strong></div>
+    <div class="step">B. $4^3 = 4 \times 4 \times 4 = 64$ → <strong>BENAR</strong></div>
+    <div class="step">C. $5^2 = 25$, bukan $10$ → <strong>SALAH</strong></div>
+    <div class="step">D. $2^6 = 64$ → <strong>BENAR</strong></div>
+    <div class="step">E. $6^2 = 36$ → <strong>BENAR</strong></div>
+    <span class="jawaban">Jawaban: A, B, D, E</span>
+  </div>
+</div>
+
+<!-- Soal 32 -->
+<div class="card" id="card32">
+  <div class="q-number">Soal 32 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Manakah yang bernilai sama dengan $1$?</div>
+  <div class="options">
+    <label><input type="checkbox" name="q32" value="A"> A. $8^0$</label>
+    <label><input type="checkbox" name="q32" value="B"> B. $4^0$</label>
+    <label><input type="checkbox" name="q32" value="C"> C. $2^1$</label>
+    <label><input type="checkbox" name="q32" value="D"> D. $15^0$</label>
+    <label><input type="checkbox" name="q32" value="E"> E. $9^0$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p32', this)">Pembahasan</button>
+  <div class="pembahasan" id="p32">
+    <div class="step">Sifat penting: $a^0 = 1$ untuk setiap $a \neq 0$.</div>
+    <div class="step">A. $8^0 = 1$ → <strong>BENAR</strong></div>
+    <div class="step">B. $4^0 = 1$ → <strong>BENAR</strong></div>
+    <div class="step">C. $2^1 = 2$ → <strong>SALAH</strong></div>
+    <div class="step">D. $15^0 = 1$ → <strong>BENAR</strong></div>
+    <div class="step">E. $9^0 = 1$ → <strong>BENAR</strong></div>
+    <span class="jawaban">Jawaban: A, B, D, E</span>
+  </div>
+</div>
+
+<!-- Soal 33 -->
+<div class="card" id="card33">
+  <div class="q-number">Soal 33 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Manakah yang merupakan barisan aritmetika?</div>
+  <div class="options">
+    <label><input type="checkbox" name="q33" value="A"> A. $4, 7, 10, \ldots$</label>
+    <label><input type="checkbox" name="q33" value="B"> B. $2, 6, 18, \ldots$</label>
+    <label><input type="checkbox" name="q33" value="C"> C. $20, 15, 10, \ldots$</label>
+    <label><input type="checkbox" name="q33" value="D"> D. $1, 4, 9, \ldots$</label>
+    <label><input type="checkbox" name="q33" value="E"> E. $6, 11, 16, \ldots$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p33', this)">Pembahasan</button>
+  <div class="pembahasan" id="p33">
+    <div class="step">Barisan aritmetika: selisih dua suku berurutan selalu tetap.</div>
+    <div class="step">A. $7 - 4 = 3$, $10 - 7 = 3$ → beda tetap $3$ → <strong>ARITMETIKA</strong></div>
+    <div class="step">B. $6 - 2 = 4$, $18 - 6 = 12$ → beda tidak tetap (ini geometri, $r = 3$) → <strong>BUKAN</strong></div>
+    <div class="step">C. $15 - 20 = -5$, $10 - 15 = -5$ → beda tetap $-5$ → <strong>ARITMETIKA</strong></div>
+    <div class="step">D. $4 - 1 = 3$, $9 - 4 = 5$ → beda tidak tetap → <strong>BUKAN</strong></div>
+    <div class="step">E. $11 - 6 = 5$, $16 - 11 = 5$ → beda tetap $5$ → <strong>ARITMETIKA</strong></div>
+    <span class="jawaban">Jawaban: A, C, E</span>
+  </div>
+</div>
+
+<!-- Soal 34 -->
+<div class="card" id="card34">
+  <div class="q-number">Soal 34 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Pernyataan yang benar untuk barisan $2, 6, 18, 54, \ldots$ adalah …</div>
+  <div class="options">
+    <label><input type="checkbox" name="q34" value="A"> A. $r = 3$</label>
+    <label><input type="checkbox" name="q34" value="B"> B. $U_3 = 18$</label>
+    <label><input type="checkbox" name="q34" value="C"> C. $U_4 = 54$</label>
+    <label><input type="checkbox" name="q34" value="D"> D. $a = 2$</label>
+    <label><input type="checkbox" name="q34" value="E"> E. $U_5 = 108$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p34', this)">Pembahasan</button>
+  <div class="pembahasan" id="p34">
+    <div class="step">Diketahui $a = U_1 = 2$ dan $r = \dfrac{6}{2} = 3$.</div>
+    <div class="step">A. $r = 3$ → <strong>BENAR</strong></div>
+    <div class="step">B. $U_3 = 18$ (sesuai barisan) → <strong>BENAR</strong></div>
+    <div class="step">C. $U_4 = 54$ (sesuai barisan) → <strong>BENAR</strong></div>
+    <div class="step">D. $a = 2$ → <strong>BENAR</strong></div>
+    <div class="step">E. $U_5 = 2 \cdot 3^4 = 2 \cdot 81 = 162 \neq 108$ → <strong>SALAH</strong></div>
+    <span class="jawaban">Jawaban: A, B, C, D</span>
+  </div>
+</div>
+
+<!-- Soal 35 -->
+<div class="card" id="card35">
+  <div class="q-number">Soal 35 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Manakah pernyataan berikut yang <strong>BENAR</strong>?</div>
+  <div class="options">
+    <label><input type="checkbox" name="q35" value="A"> A. $\sin 45^\circ = \dfrac{1}{2}\sqrt{2}$</label>
+    <label><input type="checkbox" name="q35" value="B"> B. $\cos 60^\circ = \dfrac{1}{2}$</label>
+    <label><input type="checkbox" name="q35" value="C"> C. $\tan 30^\circ = \sqrt{3}$</label>
+    <label><input type="checkbox" name="q35" value="D"> D. $\sin 90^\circ = 1$</label>
+    <label><input type="checkbox" name="q35" value="E"> E. $\cos 30^\circ = \dfrac{1}{2}$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p35', this)">Pembahasan</button>
+  <div class="pembahasan" id="p35">
+    <div class="step">A. $\sin 45^\circ = \dfrac{1}{2}\sqrt{2}$ → <strong>BENAR</strong></div>
+    <div class="step">B. $\cos 60^\circ = \dfrac{1}{2}$ → <strong>BENAR</strong></div>
+    <div class="step">C. $\tan 30^\circ = \dfrac{1}{3}\sqrt{3}$, bukan $\sqrt{3}$ → <strong>SALAH</strong></div>
+    <div class="step">D. $\sin 90^\circ = 1$ → <strong>BENAR</strong></div>
+    <div class="step">E. $\cos 30^\circ = \dfrac{1}{2}\sqrt{3}$, bukan $\dfrac{1}{2}$ → <strong>SALAH</strong></div>
+    <span class="jawaban">Jawaban: A, B, D</span>
+  </div>
+</div>
+
+<!-- ============================ COPYRIGHT ============================ -->
+<div class="copyright">
+  Copyright © : <span class="copy-year"></span> | Rahadi S.
+</div>
+
+<script>
+/* =========================================================
+   KUNCI JAWABAN
+   - String  : soal pilihan ganda biasa (satu jawaban)
+   - Array   : soal pilihan ganda kompleks (beberapa jawaban)
+   ========================================================= */
+const answers = {
+  q1:'B',  q2:'B',  q3:'D',  q4:'B',  q5:'C',
+  q6:'B',  q7:'C',  q8:'B',  q9:'D',  q10:'C',
+  q11:'C', q12:'D', q13:'C', q14:'C', q15:'C',
+  q16:'C', q17:'C', q18:'C', q19:'C', q20:'C',
+  q21:'B', q22:'C', q23:'D', q24:'B', q25:'B',
+  q26:'B', q27:'D', q28:'C', q29:'B', q30:'B',
+  q31:['A','B','D','E'],
+  q32:['A','B','D','E'],
+  q33:['A','C','E'],
+  q34:['A','B','C','D'],
+  q35:['A','B','D']
+};
+
+const TOTAL = 35;
+
+function toggle(id, btn) {
+  const el = document.getElementById(id);
+  el.classList.toggle('show');
+  if (el.classList.contains('show')) {
+    btn.textContent = 'Tutup Pembahasan';
+    btn.classList.add('active');
+  } else {
+    btn.textContent = 'Pembahasan';
+    btn.classList.remove('active');
+  }
+}
+
+function checkAll() {
+  let score = 0;
+
+  for (let i = 1; i <= TOTAL; i++) {
+    const name = 'q' + i;
+    const card = document.getElementById('card' + i);
+    const labels = card.querySelectorAll('.options label');
+    labels.forEach(l => l.classList.remove('correct', 'incorrect'));
+
+    const ans = answers[name];
+
+    /* ---------- PILIHAN GANDA KOMPLEKS ---------- */
+    if (Array.isArray(ans)) {
+      const checked = Array.from(
+        card.querySelectorAll('input[name="' + name + '"]:checked')
+      ).map(x => x.value);
+
+      const allCorrect =
+        checked.length === ans.length && ans.every(a => checked.includes(a));
+
+      if (allCorrect) score++;
+
+      labels.forEach(l => {
+        const inp = l.querySelector('input');
+        if (inp.checked) {
+          l.classList.add(ans.includes(inp.value) ? 'correct' : 'incorrect');
+        } else if (ans.includes(inp.value)) {
+          l.classList.add('correct'); // kunci ditampilkan
+        }
+      });
+    }
+
+    /* ---------- PILIHAN GANDA BIASA ---------- */
+    else {
+      const selected = card.querySelector('input[name="' + name + '"]:checked');
+      if (selected) {
+        if (selected.value === ans) {
+          score++;
+          selected.parentElement.classList.add('correct');
+        } else {
+          selected.parentElement.classList.add('incorrect');
+          const correctInput = card.querySelector(
+            'input[name="' + name + '"][value="' + ans + '"]'
+          );
+          if (correctInput) correctInput.parentElement.classList.add('correct');
+        }
+      }
+    }
+  }
+
+  document.getElementById('score-display').textContent = `Skor: ${score} / ${TOTAL}`;
+}
+
+function resetAll() {
+  document.querySelectorAll('input[type="radio"], input[type="checkbox"]')
+    .forEach(r => r.checked = false);
+  document.querySelectorAll('.options label')
+    .forEach(l => l.classList.remove('correct', 'incorrect'));
+  document.querySelectorAll('.pembahasan')
+    .forEach(p => p.classList.remove('show'));
+  document.querySelectorAll('.btn-pembahasan')
+    .forEach(b => { b.textContent = 'Pembahasan'; b.classList.remove('active'); });
+  document.getElementById('score-display').textContent = `Skor: 0 / ${TOTAL}`;
+}
+
+/* ================================================================
+   ISI TAHUN COPYRIGHT OTOMATIS
+   ================================================================ */
+document.querySelectorAll('.copy-year').forEach(function (el) {
+  el.textContent = new Date().getFullYear();
+});
+</script>
+
+<!-- ==================== FORCE FULLSCREEN ==================== -->
+<div id="fs-banner" style="display:none; position:fixed; left:50%; bottom:20px; transform:translateX(-50%); background:#2c3e50; color:#fff; padding:10px 18px; border-radius:8px; font-size:14px; z-index:9999; box-shadow:0 4px 12px rgba(0,0,0,.25); cursor:pointer;">
+  Klick to FULLSCREEN
+</div>
+
+<script>
+(function () {
+  function requestFS() {
+    var el = document.documentElement;
+    var fn = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+    if (fn) {
+      try {
+        var p = fn.call(el);
+        if (p && p.catch) p.catch(function(){ showBanner(); });
+        return true;
+      } catch (e) { showBanner(); return false; }
+    } else {
+      showBanner();
+      return false;
+    }
+  }
+
+  function isFS() {
+    return document.fullscreenElement || document.webkitFullscreenElement ||
+           document.mozFullScreenElement || document.msFullscreenElement;
+  }
+
+  function showBanner() {
+    var b = document.getElementById('fs-banner');
+    if (b) b.style.display = 'block';
+  }
+
+  function hideBanner() {
+    var b = document.getElementById('fs-banner');
+    if (b) b.style.display = 'none';
+  }
+
+  // 1) Coba langsung saat halaman siap
+  window.addEventListener('load', function () {
+    if (!isFS()) {
+      requestFS();
+      setTimeout(function () {
+        if (!isFS()) showBanner();
+      }, 500);
+    }
+  });
+
+  // 2) Fallback: interaksi pertama pengguna
+  function firstInteraction() {
+    if (!isFS()) requestFS();
+    document.removeEventListener('click', firstInteraction);
+    document.removeEventListener('touchstart', firstInteraction);
+    document.removeEventListener('keydown', firstInteraction);
+  }
+  document.addEventListener('click', firstInteraction);
+  document.addEventListener('touchstart', firstInteraction, {passive:true});
+  document.addEventListener('keydown', firstInteraction);
+
+  // 3) Banner bisa diklik
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'fs-banner') {
+      requestFS();
+    }
+  });
+
+  // 4) Sembunyikan banner jika sudah fullscreen
+  document.addEventListener('fullscreenchange', function () {
+    if (isFS()) hideBanner();
+  });
+  document.addEventListener('webkitfullscreenchange', function () {
+    if (isFS()) hideBanner();
+  });
+
+  // 5) (Opsional) Tombol manual
+  window.toggleFullscreen = function () {
+    if (isFS()) {
+      var exit = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
+      if (exit) exit.call(document);
+    } else {
+      requestFS();
+    }
+  };
+})();
+</script>
+</body>
+</html>
